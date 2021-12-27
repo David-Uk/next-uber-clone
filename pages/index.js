@@ -20,6 +20,19 @@ export default function Home() {
           </Profile>
         </Header>
         {/* ActionButtons */}
+        <ActionButtons>
+          
+          <ActionButton>
+          <ActionButtonImage src='https://i.ibb.co/cyvcpfF/uberx.png' />
+            Ride</ActionButton>
+          <ActionButton>
+          <ActionButtonImage src='https://i.ibb.co/n776JLm/bike.png' />
+            Wheels</ActionButton> 
+          <ActionButton>
+          <ActionButtonImage src='https://i.ibb.co/5RjchBg/uberschedule.png' />
+            Reserve</ActionButton> 
+        </ActionButtons>
+        <InputButton>Where to?</InputButton> 
       </ActionItems>
     </Wrapper>
   )
@@ -50,4 +63,18 @@ const Name = tw.div`
 
 const UserImage = tw.img`
   h-12 w-12 rounded-full borderborder-gray-200 p-px
+`
+
+const ActionButtons = tw.div`
+  flex
+`
+const ActionButtonImage = tw.img`
+  h-3/5
+`
+const ActionButton = tw.div`
+  flex flex-col bg-gray-200 flex-1 m-1 h-32 items-center justify-center rounded-lg transform hover:scale-105 transition text-xl
+`
+
+const InputButton = tw.div`
+  h-20 bg-gray-200 text-2xl p-4 flex items-center mt-8
 `
