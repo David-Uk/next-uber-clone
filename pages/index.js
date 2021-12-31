@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 // import styles from '../styles/Home.module.css'
 import tw from 'tailwind-styled-components'
 import Map from './components/Map';
@@ -16,23 +17,26 @@ export default function Home() {
           <UberLogo src="https://i.ibb.co/84stgjq/uber-technologies-new-20215114.jpg" />
           <Profile>
             <Name>Paul Wilbur</Name>
-            <UserImage src='https://images.unsplash.com/photo-1529688530647-93a6e1916f5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnZXJpYW4lMjBtYW58ZW58MHx8MHx8&w=1000&q=80'/>
+            <UserImage src='https://images.unsplash.com/photo-1529688530647-93a6e1916f5f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlnZXJpYW4lMjBtYW58ZW58MHx8MHx8&w=1000&q=80' />
           </Profile>
         </Header>
         {/* ActionButtons */}
         <ActionButtons>
-          
+          <Link href='/search'>
+            <ActionButton>
+              <ActionButtonImage src='https://i.ibb.co/cyvcpfF/uberx.png' />
+              Ride
+            </ActionButton>
+          </Link>
+
           <ActionButton>
-          <ActionButtonImage src='https://i.ibb.co/cyvcpfF/uberx.png' />
-            Ride</ActionButton>
+            <ActionButtonImage src='https://i.ibb.co/n776JLm/bike.png' />
+            Wheels</ActionButton>
           <ActionButton>
-          <ActionButtonImage src='https://i.ibb.co/n776JLm/bike.png' />
-            Wheels</ActionButton> 
-          <ActionButton>
-          <ActionButtonImage src='https://i.ibb.co/5RjchBg/uberschedule.png' />
-            Reserve</ActionButton> 
+            <ActionButtonImage src='https://i.ibb.co/5RjchBg/uberschedule.png' />
+            Reserve</ActionButton>
         </ActionButtons>
-        <InputButton>Where to?</InputButton> 
+        <InputButton>Where to?</InputButton>
       </ActionItems>
     </Wrapper>
   )
@@ -73,6 +77,7 @@ const ActionButtonImage = tw.img`
 `
 const ActionButton = tw.div`
   flex flex-col bg-gray-200 flex-1 m-1 h-32 items-center justify-center rounded-lg transform hover:scale-105 transition text-xl
+  cursor-pointer 
 `
 
 const InputButton = tw.div`
