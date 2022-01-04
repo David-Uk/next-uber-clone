@@ -27,7 +27,7 @@ const search = () => {
                 <StarIcon src='https://img.icons8.com/ios-filled/50/ffffff/star--v1.png' />
             </SavedPlaces>
             <ConfirmLocation>
-                <ConfirmButton>Confirm Location</ConfirmButton>
+                Confirm Location
             </ConfirmLocation>
         </Wrapper>
     )
@@ -87,9 +87,9 @@ const StarIcon = tw.img`
 `
 
 const ConfirmLocation = tw.div`
-    content-center w-50
+    bg-black text-center text-white mt-2 mx-4 px-4 py-3 text-2xl cursor-pointer
 `
 
 const ConfirmButton = tw.div`
-    bg-black content-center text-center text-white
+    content-center text-center
 `
