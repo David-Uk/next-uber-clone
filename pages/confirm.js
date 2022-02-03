@@ -10,7 +10,8 @@ const Confirm = () => {
         const pickup = 'Lagos'
         fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?` +
         new URLSearchParams({
-            access_token: 'pk.eyJ1IjoiZGF2aWQtdWsiLCJhIjoiY2thcGVzOTM0MDFraTJycHd3bjhmejVmNCJ9.h7mivfQ0c4j6OTIZbdc8GA'
+            access_token: 'pk.eyJ1IjoiZGF2aWQtdWsiLCJhIjoiY2thcGVzOTM0MDFraTJycHd3bjhmejVmNCJ9.h7mivfQ0c4j6OTIZbdc8GA',
+            limit:1
         }))
         .then(response => response.json())
         .then(data => setPickUpCoordinates(data.features[0].center))
